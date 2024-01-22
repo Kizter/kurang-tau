@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+  
+    <title>ligma</title>
+    <style type="text/css">
+        input[type=password],input[type=email]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            background: transparent;         
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
+        }
+
+        input[type=text],select{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid rgb(209, 226, 243);
+            outline: none;
+            background: transparent;
+            border-radius: 10px;
+            box-sizing: border-box;
+        } 
+        input[type=submit]{
+            width: 100%;
+            background-color: #0f74bd;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        input[type=submit]:hover{
+            background-color: #3da8f5;
+        }
+        div{
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 2px solid rgb(209, 226, 243);
+            box-shadow: 0 0 7px rgb(0, 0, 0, 5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .kotaklogin{
+            width: 350px;
+            height: 390px;
+            margin: 20px auto 80px auto;
+        }
+       h1{
+            text-align: center;
+            margin: 80px auto 0 auto;
+            color: #cbe0f1;
+        }
+        body{
+            font-family: Arial;
+            background-image: url(asset/kocak.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <div class="kotaklogin">
+        <form action="login.php">
+            <label for="fname">Email</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="email...">
+            <br><br>
+            <label for="iname">Password</label>
+            <br>
+            <input type="password" id="pass" name="pass" placeholder="password...">
+            <br>
+            <input type="checkbox" onclick="showHide()">Tampilkan Password
+            <br>
+            <br>
+            <label for="status">Status</label>
+            <select id="stat" name="status">
+                <option value="Siswa">Siswa</option>
+                <option value="Guru">Guru</option>
+            </select>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <script>
+            function showHide(){
+            var inputan = document.getElementById("pass");
+            if(inputan.type === "password"){
+                inputan.type = "text";
+            }
+            else{
+                inputan.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
